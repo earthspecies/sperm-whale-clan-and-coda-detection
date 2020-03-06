@@ -8,7 +8,13 @@ index = {"dominicana": "02_Data_preparation.ipynb",
          "independent_vars_to_targs": "02_Data_preparation.ipynb",
          "drop_last_value": "02_Data_preparation.ipynb",
          "get_target": "02_Data_preparation.ipynb",
-         "get_clan_membership": "02_Data_preparation.ipynb"}
+         "get_clan_membership": "02_Data_preparation.ipynb",
+         "merged_datasets": "02_Data_preparation.ipynb",
+         "get_ETP_independent_vars": "02_Data_preparation.ipynb",
+         "dblock_pretrain": "02_Data_preparation.ipynb",
+         "datasets_pretrain": "02_Data_preparation.ipynb",
+         "mask": "02_Data_preparation.ipynb",
+         "dominicana_clean": "02_Data_preparation.ipynb"}
 
 modules = ["data.py"]
 
