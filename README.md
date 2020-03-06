@@ -1,8 +1,6 @@
-# Title
-> summary
-
-
 # This repository is a Work In Progress!
+> please proceed with caution
+
 
 This repository builds on the work in [Deep Machine Learning Techniques for the Detection and Classification of Sperm Whale Bioacoustics](https://www.nature.com/articles/s41598-019-48909-4), a fascinating paper by Peter C. Bermant, Michael M. Bronstein, Robert J. Wood, Shane Gero & David F. Gruber.
 
