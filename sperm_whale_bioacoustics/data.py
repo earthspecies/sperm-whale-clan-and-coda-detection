@@ -2,7 +2,8 @@
 
 __all__ = ['dominicana', 'etp', 'get_independent_vars', 'independent_vars_to_targs', 'drop_last_value', 'get_target',
            'get_clan_membership', 'merged_datasets', 'get_ETP_independent_vars', 'dblock_pretrain', 'datasets_pretrain',
-           'mask', 'dominicana_clean']
+           'mask', 'dominicana_clean', 'dominicana_clan', 'dblock_train', 'datasets_clan', 'get_coda_type',
+           'dblock_train', 'datasets_coda']
 
 # Cell
 from fastai2.data.all import *
@@ -41,8 +42,36 @@ dblock_pretrain = DataBlock(
     splitter=TrainTestSplitter(test_size=0.1, random_state=42) # having a validation set is crucial for any task,
 )                                                              # including pretraining!
 
-datasets_pretrain = dblock_pretrain.datasets(merged_datasets); datasets_pretrain
+datasets_pretrain = dblock_pretrain.datasets(merged_datasets)
 
 # Cell
 mask = dominicana.CodaType.isin(['1-NOISE', '2-NOISE','3-NOISE','4-NOISE','5-NOISE','6-NOISE','7-NOISE','8-NOISE','9-NOISE','10-NOISE','10i','10R'])
 dominicana_clean = dominicana[~mask]
+
+# Cell
+dominicana_clan = pd.concat(
+    (
+        dominicana[dominicana.Clan == 'EC1'].sample(n=949),
+        dominicana[dominicana.Clan == 'EC2']
+    )
+)
+
+# Cell
+dblock_train = DataBlock(
+    get_x = get_independent_vars,
+    get_y = (get_clan_membership, Categorize),
+    splitter = TrainTestSplitter(test_size=0.1, random_state=42, stratify=dominicana_clan.Clan.factorize()[0])
+)
+
+datasets_clan = dblock_train.datasets(dominicana_clan)
+
+# Cell
+get_coda_type = partialler(get_target, col_name='CodaType')
+
+dblock_train = DataBlock(
+    get_x = get_independent_vars,
+    get_y = (get_coda_type, Categorize),
+    splitter = TrainTestSplitter(test_size=0.1, random_state=42, stratify=dominicana_clean.CodaType.factorize()[0])
+)
+
+datasets_coda = dblock_train.datasets(dominicana_clean)

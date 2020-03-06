@@ -14,7 +14,12 @@ index = {"dominicana": "02_Data_preparation.ipynb",
          "dblock_pretrain": "02_Data_preparation.ipynb",
          "datasets_pretrain": "02_Data_preparation.ipynb",
          "mask": "02_Data_preparation.ipynb",
-         "dominicana_clean": "02_Data_preparation.ipynb"}
+         "dominicana_clean": "02_Data_preparation.ipynb",
+         "dominicana_clan": "02_Data_preparation.ipynb",
+         "dblock_train": "02_Data_preparation.ipynb",
+         "datasets_clan": "02_Data_preparation.ipynb",
+         "get_coda_type": "02_Data_preparation.ipynb",
+         "datasets_coda": "02_Data_preparation.ipynb"}
 
 modules = ["data.py"]
 
