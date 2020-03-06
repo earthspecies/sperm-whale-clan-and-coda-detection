@@ -18,6 +18,7 @@ jobs:
         pip install -e ".[dev]"
         pip install xlrd
         pip install librosa
+        pip install soundfile
     - name: Read all notebooks
       run: |
         nbdev_read_nbs
