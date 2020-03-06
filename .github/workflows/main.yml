@@ -13,6 +13,9 @@ jobs:
       run: |
         pip install nbdev jupyter
         pip install -e .
+        git clone https://github.com/fastai/fastai2
+        cd fastai2
+        pip install -e ".[dev]"
     - name: Read all notebooks
       run: |
         nbdev_read_nbs
