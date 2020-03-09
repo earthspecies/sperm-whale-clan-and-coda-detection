@@ -15,6 +15,15 @@ entries:
     - output: web,pdf
       title: Data preparation
       url: /Data_preparation
+    - output: web,pdf
+      title: Create the baseline
+      url: /Baseline
+    - output: web,pdf
+      title: Pretraining
+      url: /Pretraining
+    - output: web,pdf
+      title: Title
+      url: /Clan_and_coda_type_detection_with_RNN
     output: web
     title: sperm_whale_bioacoustics
   output: web

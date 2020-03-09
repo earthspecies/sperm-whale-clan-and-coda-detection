@@ -51,7 +51,7 @@ dominicana_clean = dominicana[~mask]
 # Cell
 dominicana_clan = pd.concat(
     (
-        dominicana[dominicana.Clan == 'EC1'].sample(n=949),
+        dominicana[dominicana.Clan == 'EC1'].sample(n=949, random_state=42),
         dominicana[dominicana.Clan == 'EC2']
     )
 )

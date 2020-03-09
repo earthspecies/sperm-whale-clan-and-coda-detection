@@ -19,9 +19,11 @@ index = {"dominicana": "02_Data_preparation.ipynb",
          "dblock_train": "02_Data_preparation.ipynb",
          "datasets_clan": "02_Data_preparation.ipynb",
          "get_coda_type": "02_Data_preparation.ipynb",
-         "datasets_coda": "02_Data_preparation.ipynb"}
+         "datasets_coda": "02_Data_preparation.ipynb",
+         "Model": "04_Pretraining.ipynb"}
 
-modules = ["data.py"]
+modules = ["data.py",
+           "model_pretrain.py"]
 
 doc_url = "https://fastai.github.io/sperm_whale_bioacoustics/"
 

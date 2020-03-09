@@ -2,6 +2,9 @@
   "sperm_whale_bioacoustics": {
     "Overview": "/",
     "Introduction": "/Introduction",
-    "Data preparation": "/Data_preparation"
+    "Data preparation": "/Data_preparation",
+    "Create the baseline": "/Baseline",
+    "Pretraining": "/Pretraining",
+    "Title": "/Clan_and_coda_type_detection_with_RNN"
   }
 }
