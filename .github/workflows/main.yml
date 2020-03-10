@@ -20,6 +20,7 @@ jobs:
         pip install librosa
         sudo apt-get install libsndfile1
         pip install soundfile
+        pip install seaborn
     - name: Read all notebooks
       run: |
         nbdev_read_nbs
