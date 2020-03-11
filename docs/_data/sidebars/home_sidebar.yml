@@ -17,12 +17,12 @@ entries:
       url: /Data_preparation
     - output: web,pdf
       title: Create the baseline
-      url: /Baseline
+      url: /Baselines
     - output: web,pdf
       title: Pretraining
       url: /Pretraining
     - output: web,pdf
-      title: Title
+      title: Clan and coda type detection with RNN
       url: /Clan_and_coda_type_detection_with_RNN
     output: web
     title: sperm_whale_bioacoustics

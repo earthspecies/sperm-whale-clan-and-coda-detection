@@ -14,8 +14,6 @@ etp = pd.read_excel('data/ETP.xlsx')
 # Cell
 def get_independent_vars(row, start_col=4, n_vals=9):
     vals = [v for v in row[start_col:(start_col+n_vals)].values if v != 0]
-    # we want to manually pad the sequence
-    # we believe that for a single direction RNN padding the sequence from the left should work better
     return np.pad(vals, (n_vals - len(vals), 0))
 
 # Cell
