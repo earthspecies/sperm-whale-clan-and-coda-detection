@@ -21,6 +21,7 @@ jobs:
         sudo apt-get install libsndfile1
         pip install soundfile
         pip install seaborn
+        pip install dtreeviz
     - name: Read all notebooks
       run: |
         nbdev_read_nbs
