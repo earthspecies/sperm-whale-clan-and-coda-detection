@@ -5,6 +5,7 @@
     "Data preparation": "/Data_preparation",
     "Create the baseline": "/Baselines",
     "Pretraining": "/Pretraining",
-    "Clan and coda type detection with RNN": "/Clan_and_coda_type_detection_with_RNN"
+    "Clan and coda type detection with RNN": "/Clan_and_coda_type_detection_with_RNN",
+    "Clan and coda type detection with Random Forest": "/Clan_and_coda_type_detection_with_Random_Forest"
   }
 }

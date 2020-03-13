@@ -24,6 +24,9 @@ entries:
     - output: web,pdf
       title: Clan and coda type detection with RNN
       url: /Clan_and_coda_type_detection_with_RNN
+    - output: web,pdf
+      title: Clan and coda type detection with Random Forest
+      url: /Clan_and_coda_type_detection_with_Random_Forest
     output: web
     title: sperm_whale_bioacoustics
   output: web
