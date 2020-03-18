@@ -1,12 +1,12 @@
 ---
 
-title: This repository is a Work In Progress!
+title: Sperm whale bioacoustics
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "please proceed with caution"
-description: "please proceed with caution"
+summary: "Sperm whale clan membership and coda type detection using inter click intervals"
+description: "Sperm whale clan membership and coda type detection using inter click intervals"
 ---
 <!--
 
@@ -34,6 +34,62 @@ description: "please proceed with caution"
 <li>experiment with and report results of using Random Forest instead of the RNN, a model that can be trained to good effects without specialized deep learning knowledge, is not prone to overfitting, that can be trained without the need of a GPU and that lends itself very well to interpetation</li>
 </ul>
 <p>Above all, the goal of the repository is to provide an introduction to the world of marine biology and modern machine learning techniques.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Summary-of-results">Summary of results<a class="anchor-link" href="#Summary-of-results"> </a></h2><p>We chose to focus on the clan detection and coda type detection tasks on the dominicana dataset. Those were the only tasks (apart from classification using CNN) where results were reported on the validation set and where we were able to reconstruct how the data was processed (based on <a href="https://www.nature.com/articles/s41598-019-48909-4">the paper</a> and <a href="https://github.com/dgruber212/Sperm_Whale_Machine_Learning">the accompanying repository</a>).</p>
+<p>Our goal was not to go for the breadth of our inquiry, but rather to follow in the footsteps of the breakthrough paper to better understand the fascinating phenonemana of ICIs and their potential role in whale communication.</p>
+<p>The notebooks were constructed in a way as to allow a broader audience to follow in our footsteps.</p>
+<h3 id="Clan-detection">Clan detection<a class="anchor-link" href="#Clan-detection"> </a></h3><table>
+<thead><tr>
+<th style="text-align:center">model</th>
+<th style="text-align:left">accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">RNN (paper)</td>
+<td style="text-align:left">95.3%</td>
+</tr>
+<tr>
+<td style="text-align:center">RNN (ours)</td>
+<td style="text-align:left">93.7%</td>
+</tr>
+<tr>
+<td style="text-align:center">Random Forest</td>
+<td style="text-align:left">94.7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Coda-type-detection">Coda type detection<a class="anchor-link" href="#Coda-type-detection"> </a></h3><table>
+<thead><tr>
+<th style="text-align:center">model</th>
+<th style="text-align:left">accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">RNN (paper)</td>
+<td style="text-align:left">99.9%</td>
+</tr>
+<tr>
+<td style="text-align:center">RNN (ours)</td>
+<td style="text-align:left">100%</td>
+</tr>
+<tr>
+<td style="text-align:center">Random Forest</td>
+<td style="text-align:left">99.6%</td>
+</tr>
+</tbody>
+</table>
+<p>Our RNN and Random Forest use the same sampling of the train and validation sets and thus these results are easiest to compare. The paper followed a different sampling of the train and validation sets.</p>
+<p>Overall, the differences in performance, given the size of the validation set, are next to insignificant. All the models perform similarly.</p>
+<p>An interesting result is the stronger performance of our Random Forest as compared to our RNN on the clan detection task.</p>
+<p>We found no benefits to pretraining. For RNNs we got best results when training the entire model from scratch.</p>
+<p>The main consideration that we would like to highlight is how much less compute and specialized knowledge was needed to get good results with Random Forest. Above all, the interpretability of the model is unparalleled. The robustness of the method to training on unbalanced data and its legendary ability to not overfit (while still packing enough variance to give good results) makes this a great model to have in one's toolbox.</p>
 
 </div>
 </div>
