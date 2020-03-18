@@ -13,7 +13,7 @@ Above all, the goal of the repository is to provide an introduction to the world
 
 ## Summary of results
 
-We chose to focus on the clan detection and coda type detection tasks on the dominicana dataset. Those were the only tasks (apart from classification using CNN) where results were reported on the validation set and where we were able to reconstruct how the data was processed (based on [the paper](https://www.nature.com/articles/s41598-019-48909-4) and [the accompanying repository](https://github.com/dgruber212/Sperm_Whale_Machine_Learning)).
+We chose to focus on the clan detection and coda type detection tasks on the dominicana dataset. Those were the only tasks (apart from classification using a CNN) where results were reported on the validation set and where we were able to reconstruct how the data was processed (based on [the paper](https://www.nature.com/articles/s41598-019-48909-4) and [the accompanying repository](https://github.com/dgruber212/Sperm_Whale_Machine_Learning)).
 
 Our goal was not to go for the breadth of our inquiry, but rather to follow in the footsteps of the breakthrough paper to better understand the fascinating phenonemana of ICIs and their potential role in whale communication.
 
@@ -25,7 +25,7 @@ The notebooks were constructed in a way as to allow a broader audience to follow
 |:------:|:-----------|
 |RNN (paper)|95.3%|
 |RNN (ours) |93.7%|
-|Random Forest |94.7%|
+|Random Forest |95.3%|
 
 ### Coda type detection
 
